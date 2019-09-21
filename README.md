@@ -25,4 +25,4 @@ Bash Script execution
 
 Perl Script Execution
 
-./collect-logs.sh -u (YOURSITEUUID) -e (DEV, TEST, LIVE or MD)
+./collect-logs.pl -u (YOURSITEUUID) -e (DEV, TEST, LIVE or MD)
