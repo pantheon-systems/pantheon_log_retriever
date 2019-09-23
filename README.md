@@ -14,8 +14,8 @@ The script takes 2 arguments.
 #### Requirements: #### 
 
 - Pantheon Site Plan
-- Bash Shell or Perl
-- sftp
+- Bash Shell or Perl or Python
+- rsync
 
 #### Usage ####
 
@@ -26,3 +26,7 @@ Bash Script execution
 Perl Script Execution
 
 ./collect-logs.pl -u (YOURSITEUUID) -e (DEV, TEST, LIVE or MD)
+
+Python Script Execution
+
+./collect-logs.py --uuid (YOURSITEUUID) --env (DEV, TEST, LIVE or MD)
