@@ -41,7 +41,6 @@ fi
 
 # Grab newrelic.log, nginx-access.log, nginx-error.log, php-fpm-error.log, php-slow.log
 # and put them in an app_server directory where you execute this script
-# and put them in an app_server directory where you execute this script
 echo "Retrieving appserver logs...\n"
 rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV_NAME.$SITE_UUID@appserver.$ENV_NAME.$SITE_UUID.drush.in:logs/* app_server_logs
 
