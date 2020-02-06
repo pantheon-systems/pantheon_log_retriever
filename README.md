@@ -1,12 +1,12 @@
 # Pantheon Log Retriever
 
 ## Details ##
-This script can be used to retrieve all of the application and database server log files in one execution. The script will create two local directories in the same directory from which the script was executed and place the logs in each corresponding directory.
+These scripts can be used to retrieve all of the application and database server log files in one execution. These scripts will create two local directories in the same directory from which the script was executed and place the logs in each corresponding directory.
 
 - app_server_logs_ENV_NAME
 - db_server_logs_ENV_NAME
 
-When you specify "live" as your environment name, the script will retrieve the logs from each of your live application containers and place them into separate directories called:
+When you specify "live" as your environment name, the scripts will retrieve the logs from each of your live application containers and place them into separate directories called:
 
 - app_server_logs_IP_ADDRESS_OF_CONTAINER
 - db_server_logs_IP_ADDRESS_OF_CONTAINER
