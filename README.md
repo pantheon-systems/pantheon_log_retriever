@@ -28,6 +28,10 @@ Bash Script execution
 
 ./collect-logs.sh -u=(YOURSITEUUID) -e=(DEV, TEST, LIVE or MD)
 
+PHP Script execution
+
+./collect-logs.sh u=(YOURSITEUUID) e=(DEV, TEST, LIVE or MD NAME)
+
 Perl Script Execution
 
 ./collect-logs.pl -u (YOURSITEUUID) -e (DEV, TEST, LIVE or MD)
