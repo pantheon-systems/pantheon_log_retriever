@@ -23,7 +23,7 @@ if(defined $opt_u && defined $opt_e) {  # double check existence
     print "Retrieving live appserver " . $opt_u . " logs...\r\n";
     foreach $app_server (@app_dig) {
       chomp $app_server;
-      system('rsync -rlvz --size-only --ipv4 --progress -e \'ssh -p 2222\' ' . $opt_e . '.' . $opt_u . '@appserver.' . $opt_e . '.' . $opt_u . '.drush.in:logs/* app_server_' . $app_server .'_logs');
+      system('rsync -rlvz --size-only --ipv4 --progress -e \'ssh -p 2222 -o "StrictHostKeyChecking no"\' ' . $opt_e . '.' . $opt_u . '@appserver.' . $opt_e . '.' . $opt_u . '.drush.in:logs/* app_server_' . $app_server .'_logs');
       #print "Waiting for appserver rsync to finish...\r\n";
       #sleep(3);
     }
@@ -32,17 +32,17 @@ if(defined $opt_u && defined $opt_e) {  # double check existence
     print "Retrieving DB server logs...\r\n";
     foreach $app_server (@app_dig) {
       chomp $app_server;
-      system('rsync -rlvz --size-only --ipv4 --progress -e \'ssh -p 2222\' ' . $opt_e . '.' . $opt_u . '@dbserver.' . $opt_e . '.' . $opt_u . '.drush.in:logs/* db_server_' . $app_server .'_logs');
+      system('rsync -rlvz --size-only --ipv4 --progress -e \'ssh -p 2222 -o "StrictHostKeyChecking no"\' ' . $opt_e . '.' . $opt_u . '@dbserver.' . $opt_e . '.' . $opt_u . '.drush.in:logs/* db_server_' . $app_server .'_logs');
       #print "Waiting for dbserver rsync to finish...\r\n";
       #sleep(3);
     }
   } else {
     print "Retrieving appserver logs for " . $opt_e . "...\r\n";
-    system('rsync -rlvz --size-only --ipv4 --progress -e \'ssh -p 2222\' ' . $opt_e . '.' . $opt_u . '@appserver.' . $opt_e . '.' . $opt_u . '.drush.in:logs/* app_server_logs_' . $opt_e);
+    system('rsync -rlvz --size-only --ipv4 --progress -e \'ssh -p 2222 -o "StrictHostKeyChecking no"\' ' . $opt_e . '.' . $opt_u . '@appserver.' . $opt_e . '.' . $opt_u . '.drush.in:logs/* app_server_logs_' . $opt_e);
     print "Waiting for Appserver rsync to finish...\r\n";
     sleep(3);
     print "Retrieving DB server logs for " . $opt_e . "...\r\n";
-    system('rsync -rlvz --size-only --ipv4 --progress -e \'ssh -p 2222\' ' . $opt_e . '.' . $opt_u . '@dbserver.' . $opt_e . '.' . $opt_u . '.drush.in:logs/* db_server_logs_' . $opt_e);
+    system('rsync -rlvz --size-only --ipv4 --progress -e \'ssh -p 2222 -o "StrictHostKeyChecking no"\' ' . $opt_e . '.' . $opt_u . '@dbserver.' . $opt_e . '.' . $opt_u . '.drush.in:logs/* db_server_logs_' . $opt_e);
   }
 } else {
   print "Some or all of the parameters are empty\r\n";
