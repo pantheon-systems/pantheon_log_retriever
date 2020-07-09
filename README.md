@@ -30,7 +30,7 @@ Bash Script execution
 
 PHP Script execution
 
-./collect-logs.sh u=(YOURSITEUUID) e=(DEV, TEST, LIVE or MD NAME)
+./collect-logs.php u=(YOURSITEUUID) e=(DEV, TEST, LIVE or MD NAME)
 
 Perl Script Execution
 
