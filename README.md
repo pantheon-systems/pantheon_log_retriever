@@ -19,7 +19,7 @@ The script takes 2 arguments.
 #### Requirements: #### 
 
 - Pantheon Site Plan
-- Bash Shell or Perl or Python
+- Bash Shell or Perl or Python or PHP
 - rsync
 
 #### Usage ####
