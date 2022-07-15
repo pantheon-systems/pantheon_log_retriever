@@ -1,6 +1,6 @@
 # Pantheon Log Retriever
 
-[![Actively Maintained](https://img.shields.io/badge/Pantheon-Actively_Maintained-yellow?logo=pantheon&color=FFDC28)](https://pantheon.io/docs/oss-support-levels#actively-maintained)
+[![Unsupported](https://img.shields.io/badge/Pantheon-Unsupported-yellow?logo=pantheon&color=FFDC28)](https://pantheon.io/docs/oss-support-levels#unsupported)
 
 ## Details ##
 These scripts can be used to retrieve all of the application and database server log files in one execution. These scripts will create two local directories in the same directory from which the script was executed and place the logs in each corresponding directory.
